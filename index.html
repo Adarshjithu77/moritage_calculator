@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mortgage Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-50 flex items-center justify-center min-h-screen">
+  <div class="flex flex-col md:flex-row bg-white rounded-xl  w-full max-w-5xl">
+    
+    
+    <div class="w-full md:w-1/2 p-8">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-semibold text-gray-800">Mortgage Calculator</h2>
+        <a href="#" class="text-sm text-blue-600 underline">Clear All</a>
+      </div>
+
+      <form>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Mortgage Amount</label>
+        <div class="flex items-center mb-4">
+          <span class="bg-gray-300 px-3 py-2 rounded-l text-gray-600">£</span>
+          <input type="number" class="w-full border border-gray-300 rounded-r px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value="300000" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Mortgage Term</label>
+            <div class="flex">
+              <input type="number" class="w-full border border-gray-300 rounded-l px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" value="25" />
+              <span class="bg-gray-300 px-3 py-2 rounded-r text-gray-600">years</span>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Interest Rate</label>
+            <div class="flex">
+              <input type="number" class="w-full border border-gray-300 rounded-l px-3 py-2 focus:outline-none focus:ring-2 " value="5.25" />
+              <span class="bg-gray-300 px-3 py-2 rounded-r text-gray-600">%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 mb-1">Mortgage Type</label>
+          <div class=" space-x-4">
+            <label class="flex items-center border px-4 py-2 rounded cursor-pointer bg-yellow-100 text-black font-medium">
+              <input type="radio" name="type" checked class="mr-2" />
+              Repayment
+            </label>
+            <label class="flex items-center border px-4 py-2 rounded cursor-pointer text-gray-700 font-medium">
+              <input type="radio" name="type" class="mr-2" />
+              Interest Only
+            </label>
+          </div>
+        </div>
+
+        <button type="button" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 rounded ">
+          Calculate Repayments
+        </button>
+      </form>
+    </div>
+
+    <div class="w-full md:w-1/2 bg-gray-800 text-white rounded-tr-md rounded-br-md rounded-bl-3xl p-5">
+      <h3 class="text-lg font-bold mb-2">Your results</h3>
+      <p class="text-m mb-6 text-gray-300">
+        Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.
+      </p>
+      <div class="border-t border-yellow-500 pt-4">
+        <p class="text-gray-300 text-sm mb-1">Your monthly repayments</p>
+        <p class="text-4xl font-bold text-yellow-500">£1,797.74</p>
+        <div class="mt-6 border-t border-gray-700 pt-4">
+          <p class="text-gray-300 text-sm mb-1">Total you'll repay over the term</p>
+          <p class="text-2xl font-semibold">£539,322</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
